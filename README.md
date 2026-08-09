@@ -1,4 +1,4 @@
-# TurtleShell-RT
+# **TurtleShell-RT**
 
 Open-source numerical verification of the **TurtleShell** multi-tenant isolation 
 framework for trapped-ion and neutral-atom quantum information systems.
@@ -43,8 +43,8 @@ python turtleshell_contour3.git
 ```
 
 The script produces:
-A publication-quality figure saved as contour3_buffer_dynamics.png
-Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
+- A publication-quality figure saved as contour3_buffer_dynamics.png
+- Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
 
 ### Expected Output
 
@@ -68,12 +68,16 @@ turtle-shell-rt/
 ```
 ## Contributing
 
-Contributions are welcome. Please open an issue first to discuss proposed changes.
+Contributions are welcome. Please open an issue first to discuss proposed changes.\
+If you use this code, please cite the companion paper.\
+**Acknowledgments:** This work was supported by the Moscow Polytechnic University
+as part of the core research program.
 
 ## Contact
 
-Matvei Igumnov — iqumnov@proton.me
-Dmitry Kostin — rjurt122@yandex.ru
-Kirill Pitelinsky — yekadath@gmail.com
+Matvei Igumnov — iqumnov@proton.me\
+Dmitry Kostin — rjurt122@yandex.ru\
+Kirill Pitelinsky — yekadath@gmail.com\
 
-MIT License
+**MIT License**\
+Copyright (c) 2026 Matvei Igumnov, Dmitry Kostin, Kirill Pitelinsky
