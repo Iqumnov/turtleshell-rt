@@ -62,6 +62,7 @@ Typical case (n̄₀=100): τ_b = 0.691 s
 ```
 turtle-shell-rt/
 ├── README.md                       # this file
+├── LICENSE                         # MIT License
 ├── turtleshell_contour3.py         # Contour 3 numerical verification
 └── contour3_buffer_dynamics.png    # output figure
 ```
