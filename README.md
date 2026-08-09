@@ -46,7 +46,7 @@ The script produces:
 A publication-quality figure saved as contour3_buffer_dynamics.png
 Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
 
-# Expected Output
+### Expected Output
 
 ```
 =================================================================
@@ -58,7 +58,7 @@ n̄₀ = 1000 → τ_b = 0.921 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
 =================================================================
 Typical case (n̄₀=100): τ_b = 0.691 s
 ```
-# Repository Structure
+## Repository Structure
 ```
 turtle-shell-rt/
 ├── README.md                       # this file
@@ -66,11 +66,11 @@ turtle-shell-rt/
 ├── turtleshell_contour3.py         # Contour 3 numerical verification
 └── contour3_buffer_dynamics.png    # output figure
 ```
-# Contributing
+## Contributing
 
 Contributions are welcome. Please open an issue first to discuss proposed changes.
 
-# Contact
+## Contact
 
 Matvei Igumnov — iqumnov@proton.me
 Dmitry Kostin — rjurt122@yandex.ru
