@@ -59,12 +59,12 @@ n̄₀ = 1000 → τ_b = 0.921 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
 Typical case (n̄₀=100): τ_b = 0.691 s
 ```
 # Repository Structure
-
+```
 turtle-shell-rt/
 ├── README.md                       # this file
 ├── turtleshell_contour3.py         # Contour 3 numerical verification
 └── contour3_buffer_dynamics.png    # output figure
-
+```
 # Contributing
 
 Contributions are welcome. Please open an issue first to discuss proposed changes.
