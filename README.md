@@ -48,6 +48,7 @@ Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
 
 # Expected Output
 
+```
 =================================================================
 Verification of the analytical estimate τ_b ≈ 0.7 s (Eq. 6)
 =================================================================
@@ -56,7 +57,7 @@ n̄₀ =  100 → τ_b = 0.691 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
 n̄₀ = 1000 → τ_b = 0.921 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
 =================================================================
 Typical case (n̄₀=100): τ_b = 0.691 s
-
+```
 # Repository Structure
 
 turtle-shell-rt/
