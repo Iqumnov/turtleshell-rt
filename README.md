@@ -75,4 +75,4 @@ Matvei Igumnov — iqumnov@proton.me
 Dmitry Kostin — rjurt122@yandex.ru
 Kirill Pitelinsky — yekadath@gmail.com
 
-# MIT License
+MIT License
