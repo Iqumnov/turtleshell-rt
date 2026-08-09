@@ -4,7 +4,7 @@ Open-source numerical verification of the **TurtleShell** multi-tenant isolation
 framework for trapped-ion and neutral-atom quantum information systems.
 
 This repository contains the numerical verification of **Contour 3** (temporal 
-laser-cooling buffers) as described in the companion paper (see [Citation](#citation)). 
+laser-cooling buffers). 
 The full four-contour implementation is under active development.
 
 ## What Is Implemented
