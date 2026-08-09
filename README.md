@@ -41,3 +41,37 @@ git clone https://github.com/iqumnov/turtleshell-rt.git
 cd turtleshell-rt
 python turtleshell_contour3.git
 ```
+
+The script produces:
+A publication-quality figure saved as contour3_buffer_dynamics.png
+Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
+
+# Expected Output
+
+=================================================================
+Verification of the analytical estimate τ_b ≈ 0.7 s (Eq. 6)
+=================================================================
+n̄₀ =   10 → τ_b = 0.460 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
+n̄₀ =  100 → τ_b = 0.691 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
+n̄₀ = 1000 → τ_b = 0.921 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
+=================================================================
+Typical case (n̄₀=100): τ_b = 0.691 s
+
+# Repository Structure
+
+turtle-shell-rt/
+├── README.md                       # this file
+├── turtleshell_contour3.py         # Contour 3 numerical verification
+└── contour3_buffer_dynamics.png    # output figure
+
+# Contributing
+
+Contributions are welcome. Please open an issue first to discuss proposed changes.
+
+# Contact
+
+Matvei Igumnov — iqumnov@proton.me
+Dmitry Kostin — rjurt122@yandex.ru
+Kirill Pitelinsky — yekadath@gmail.com
+
+# MIT License
