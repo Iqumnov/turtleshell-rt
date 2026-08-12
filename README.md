@@ -1,83 +1,65 @@
-# **TurtleShell-RT**
+# TurtleShell-RT
 
-Open-source numerical verification of the **TurtleShell** multi-tenant isolation 
-framework for trapped-ion and neutral-atom quantum information systems.
+**Open-source numerical verification artifact for Paper #1: "TurtleShell: A Multi-Contour Process Isolation Framework for Multi-Tenant Quantum Clouds"**
 
-This repository contains the numerical verification of **Contour 3** (temporal 
-laser-cooling buffers). 
-The full four-contour implementation is under active development.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 
-## What Is Implemented
+## Overview
 
-- **Contour 3 — Temporal laser-cooling buffers**: numerical integration of the 
-  phonon-cooling dynamics between multi-tenant sessions, verifying the 
-  analytical estimate τ_b ≈ 0.7 s at typical trapped-ion parameters.
+This repository provides **reproducible numerical verification** of the analytical model for **Contour 3** (temporal laser-cooling buffers) from the TurtleShell multi-tenant isolation framework.
 
-### Planned (upcoming releases)
+**Paper:** "TurtleShell: A Multi-Contour Process Isolation Framework for Multi-Tenant Quantum Clouds" (under review)
 
-- Contour 1 — Physical partitioning + adaptive RF filtering
-- Contour 2 — Pulse-sequence verification (SHA-256 of compilation graph)
-- Contour 4 — Differential telemetry monitoring (synthetic-frequency method)
-- Full System — A fully compiled ready-to-use system with all the developed tools and methods included
+**Scope:** This artifact verifies the phonon-cooling dynamics model (Eqs. 5-6 in the paper) using two independent methods:
+1. **Analytical solution** of the cooling ODE
+2. **Independent numerical integration** via QuTiP Lindblad master equation solver (optional)
+
+The full four-contour TurtleShell implementation is under active development and will be released as a separate repository (Paper #2).
+
+---
+
+## What Is Verified
+
+### Contour 3 — Temporal Laser-Cooling Buffers
+
+**Physical Model:** Laser cooling of trapped-ion motional modes between multi-tenant sessions to reset residual phonon excitation.
+
+**Key Equations:**
+- **Eq. (5):** Mean phonon number dynamics: `n̄(τ) = n̄_∞ + (n̄₀ - n̄_∞)·exp(-ητ)`, where `n̄_∞ = ṅ/η`
+- **Eq. (6):** Required buffer duration: `τ_b = (1/η)·ln[(n̄₀ - ṅ/η)/(n* - ṅ/η)]`
+
+**Parameters** (Table 2 in paper):
+- `η = 10 s⁻¹` (laser cooling rate)
+- `ṅ = 1 phonon/s` (anomalous heating rate)
+- `n* = 0.2` (threshold for safe session)
+
+**Result:** At typical parameters (n̄₀ = 100), the analytical estimate gives **τ_b ≈ 0.691 s**, verified numerically to machine precision (~10⁻⁶ relative error).
+
+---
 
 ## Quick Start
 
 ### Requirements
 
+**Core dependencies:**
 - Python 3.8+
-- NumPy
-- Matplotlib
+- NumPy ≥ 1.24
+- Matplotlib ≥ 3.7
+
+**Optional (for independent QuTiP verification):**
+- QuTiP ≥ 5.0 (recommended for full reproducibility)
 
 ### Installation
 
 ```bash
-pip install numpy matplotlib
+# Clone repository
 git clone https://github.com/iqumnov/turtleshell-rt.git
-```
-
-### Running
-
-```bash
 cd turtleshell-rt
-python turtleshell_contour3.git
-```
 
-The script produces:
-- A publication-quality figure saved as contour3_buffer_dynamics.png
-- Console output with numerical verification of τ_b for n̄₀ = 10, 100, 1000
+# Install core dependencies
+pip install numpy matplotlib
 
-### Expected Output
-
-```
-=================================================================
-Verification of the analytical estimate τ_b ≈ 0.7 s (Eq. 6)
-=================================================================
-n̄₀ =   10 → τ_b = 0.460 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
-n̄₀ =  100 → τ_b = 0.691 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
-n̄₀ = 1000 → τ_b = 0.921 s, n̄(τ_b) = 0.2000 (≤ n*=0.2)
-=================================================================
-Typical case (n̄₀=100): τ_b = 0.691 s
-```
-## Repository Structure
-```
-turtle-shell-rt/
-├── README.md                       # this file
-├── LICENSE                         # MIT License
-├── turtleshell_contour3.py         # Contour 3 numerical verification
-└── contour3_buffer_dynamics.png    # output figure
-```
-## Contributing
-
-Contributions are welcome. Please open an issue first to discuss proposed changes.\
-If you use this code, please cite the companion paper.\
-**Acknowledgments:** This work was supported by the Moscow Polytechnic University
-as part of the core research program.
-
-## Contact
-
-Matvei Igumnov — iqumnov@proton.me\
-Dmitry Kostin — rjurt122@yandex.ru\
-Kirill Pitelinsky — yekadath@gmail.com\
-
-**MIT License**\
-Copyright (c) 2026 Matvei Igumnov, Dmitry Kostin, Kirill Pitelinsky
+# Optional: Install QuTiP for independent verification
+pip install qutip
