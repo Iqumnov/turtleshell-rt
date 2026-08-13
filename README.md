@@ -184,25 +184,6 @@ For deviations from these assumptions, see Section 5.3 (Limitations) in the pape
 
 ---
 
-## Citation
-
-If you use this code or the underlying methodology, please cite:
-
-```bibtex
-@article{igumnov2026turtleshell,
-  title     = {TurtleShell: A Multi-Contour Process Isolation Framework
-               for Multi-Tenant Quantum Clouds},
-  author    = {Igumnov, Matvei and Kostin, Dmitry and Pitelinsky, Kirill},
-  journal   = {[Journal Name]},
-  year      = {2026},
-  note      = {Under review}
-}
-```
-
-*Update the `journal` and `year` fields once the paper is published.*
-
----
-
 ## Contributing
 
 Contributions are welcome. Please:
@@ -232,8 +213,7 @@ pytest -q
 
 ## Contact
 
-- **Matvei Igumnov** (lead developer) — `iqumnov@proton.me`
-- **Dmitry Kostin** (co-developer) — `rjurt122@yandex.ru`
+- **Matvei Igumnov** (developer) — `iqumnov@proton.me`
 - **Kirill Pitelinsky** (supervisor) — `yekadath@gmail.com`
 
 **Affiliation:** Moscow Polytechnic University, Department of Information Security
