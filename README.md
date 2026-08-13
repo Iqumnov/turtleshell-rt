@@ -4,10 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-<!-- DOI badge: раскомментируй и вставь новый DOI ПОСЛЕ того, как релиз v1.0.0
-     будет заархивирован на Zenodo (порядок действий — в конце раздела Quick Start)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
--->
 
 ## Overview
 
