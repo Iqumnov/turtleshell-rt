@@ -1,9 +1,9 @@
 import pytest
-from contour3_verification import n_bar, tau_buffer, N_STAR
+from contour3_verification import n_bar, tau_buffer, N_STAR, TAU_B_EXACT
 
 
 def test_tau_buffer_typical():
-    assert abs(tau_buffer(100) - 0.6908) < 1e-3
+    assert abs(tau_buffer(100) - TAU_B_EXACT) < 1e-9
 
 
 def test_tau_buffer_monotonic_in_n0():
